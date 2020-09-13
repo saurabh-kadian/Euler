@@ -56,10 +56,12 @@ def solve(digits, previousNumber, lenw):
     
 
 if __name__ == '__main__':
+    from time import time
+    start = time()
     digits = ''.join(['F' for i in range(1, 10)])
     answer = 0
     for index in range(1, 10):
         tempDigits = list(digits)
         tempDigits[index-1] = 'T'
         answer += solve(''.join(tempDigits), str(index), 0)
-    print("Answer to problem 118: %s" % round(answer))
+    print("Answer to problem 118: %s in %0.2f secs" % (round(answer), time() - start))
