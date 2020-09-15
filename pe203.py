@@ -52,6 +52,8 @@ def generateUniqueCombinations():
 if __name__ == '__main__':
     # 7 C 1 -> 8th row
     # 50 C 1 -> 51st row
+    from time import time
+    startTime = time()
     generateNumberToPrimes()
     numbers = generateUniqueCombinations()
-    print("Answer to problem 203: %s" % (sum(numbers)))
+    print("Answer to problem 203: %s in %0.2f secs" % (sum(numbers), time()-startTime))
